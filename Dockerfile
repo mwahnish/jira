@@ -30,7 +30,9 @@ RUN set -x \
 && chown -R ${RUN_USER}:${RUN_GROUP} ${JIRA_INSTALL} \
 && chmod -R 777 ${JIRA_INSTALL} \
 && chown -R ${RUN_USER}:${RUN_GROUP} ${JIRA_HOME} \
-&& chmod -R 777 ${JIRA_HOME}
+&& chmod -R 777 ${JIRA_HOME} \
+&& curl -L https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz -o mysql-connector.tar.gz \
+&& cp mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar ${JIRA_INSTALL}/lib/mysql-connector-java-5.1.47-bin.jar
 
 USER ${RUN_USER}:${RUN_GROUP}
 
