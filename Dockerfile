@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 
 MAINTAINER stpork from Mordor team
 
-ENV JIRA_VERSION=7.7.1 \
+ENV JIRA_VERSION=8.1.0 \
 JIRA_INSTALL=/opt/atlassian/jira \
 JIRA_HOME=/var/atlassian/application-data/jira \
 JIRA_SHARED_HOME=/var/atlassian/application-data/jira/shared \
